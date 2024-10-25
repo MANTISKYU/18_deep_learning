@@ -6,17 +6,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 /*
- * Spring에서 외부 API 요청 및 처리
- *
- * 대표적인 라이브러리
- * - HttpClient
- * - RestTemplate
- * - WebClient
- * - OpenFeign
- *
- * 주의할점
- * - request와 response가 외부서버와 맞게 설정되어있는지 확인!
- * */
+* Spring에서 외부 API 요청 및 처리
+*
+* 대표적인 라이브러리
+* - HttpClient
+* - RestTemplate
+* - WebClient
+* - OpenFeign
+*
+* 주의할점
+* - request와 response가 외부서버와 맞게 설정되어있는지 확인!
+* */
 @RestController
 @RequestMapping("/translate")
 @Slf4j
@@ -45,6 +45,6 @@ public class TransactionController {
 
         ResponseDTO result = restTemplateService.translateText(requestDTO);
 
-        return result;
+        return null;
     }
 }
